@@ -1,4 +1,4 @@
-export interface IHexOptions {
+export interface HexOptions {
     radius: number;
     borderSize: number;
     borderColor: string;
