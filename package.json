@@ -1,12 +1,22 @@
 {
   "name": "hex-grid",
   "version": "1.0.0",
-  "main": "index.js",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.15.4",
+    "@parcel/transformer-typescript-types": "^2.15.4",
+    "parcel": "^2.15.4",
+    "typescript": "^5.9.2"
+  }
 }
