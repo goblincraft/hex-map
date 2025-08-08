@@ -6,5 +6,9 @@ export const HexGrid = (() => {
 
     }
 
+    return {
+        draw
+    }
+
 
 })();
