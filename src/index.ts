@@ -26,7 +26,11 @@ export const HexGrid = (() => {
     }
 
     function _drawGrid() {
-        
+        for (let y = _hexOptions.radius; y + _hexOptions.radius * Math.sin(Math.PI / 3) < _canvas.height; y += _hexOptions.radius * Math.sin(Math.PI / 3)) {
+            for (let x = _hexOptions.radius, j = 0; x + _hexOptions.radius * (1 + Math.cos(Math.PI / 3)) < _canvas.width; x += _hexOptions.radius * (1 + Math.cos(Math.PI / 3)), y += (-1) ** j++ * _hexOptions.radius * Math.sin(Math.PI / 3)) {
+                _drawHex(x, y);
+            }
+        }
     }
 
     function _setCanvasStyling() {
@@ -50,6 +54,8 @@ export const HexGrid = (() => {
             _setupCanvas(el);
             _setHexOptions(dotOptions ? dotOptions : DefaultHexOptions);
             _setCanvasStyling();
+            _drawGrid();
+            _ctx.restore();
         } else {
             throw Error(Errors.NO_CANVAS);
         }

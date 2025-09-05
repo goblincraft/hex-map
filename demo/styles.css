@@ -9,3 +9,8 @@ html, body {
     position: relative;
     overflow: hidden;
 }
+
+#hex-grid {
+    height: 100%;
+    width: 100%;
+}
