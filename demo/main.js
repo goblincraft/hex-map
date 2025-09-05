@@ -1,4 +1,4 @@
-import { HexGrid } from "../src";
+import { HexGrid } from "../dist/module.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 

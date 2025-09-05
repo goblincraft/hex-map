@@ -8,7 +8,7 @@ export interface HexOptions {
 }
 
 export const DefaultHexOptions: HexOptions = {
-    radius: 10,
+    radius: 20,
     height: 0,
     width: 0,
     borderSize: 1,
